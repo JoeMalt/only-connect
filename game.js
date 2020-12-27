@@ -22,7 +22,7 @@ function loadRound() {
     const urlParams = new URLSearchParams(queryString);
     wall = urlParams.get("wall")
 
-    fetch("/" + wall + ".json").then(
+    fetch(wall + ".json").then(
         response => response.json())
         .then(
             data => {
