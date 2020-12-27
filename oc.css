@@ -1,0 +1,107 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#game-container {
+    width: 800px;
+}
+
+#round-title {
+    text-align: left;
+    display: inline;
+}
+
+#clock {
+    text-align: right;
+    display: inline;
+    float: right;
+}
+
+#game-instruction-row {
+    text-align: center;
+    height: 3em;
+    margin: 10px;
+}
+
+#round-title {
+    font-weight: bold;
+}
+
+#lives-left {
+    border: 2px solid darkred;
+    text-align: center;
+    height: 1.5em;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#board {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 100px 100px 100px 100px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#board.blurred {
+    filter: blur(10px);
+}
+
+#board.no-interact {
+    pointer-events: none;
+}
+
+div.cell {
+    border-radius: 20px;
+    grid-column-start: auto;
+    border: 3px solid #4444aa;
+    margin: 5px;
+    font-size: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+div.cell.default {
+    background-color: #dddddd;
+}
+
+div.cell.incorrect {
+    background-color: #dd9999 !important;
+}
+
+div.cell.selected {
+    background-color: #8888dd;
+}
+
+div.cell.correct-1 {
+    background-color: #054970;
+}
+
+div.cell.correct-2 {
+    background-color: #057b5b;
+}
+
+div.cell.correct-3 {
+    background-color: #562042;
+}
+
+div.cell.correct-4 {
+    background-color: #056e7c;
+}
+
+div.cell.correct {
+    color:#dddddd;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+

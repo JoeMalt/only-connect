@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Only Connect</title>
+    <link rel="stylesheet" href="oc.css">
+    <script src="game.js"></script>
+    <script src="board.js"></script>
+    <script type="text/javascript">
+        window.onload = loadRound;
+    </script>
+</head>
+<body>
+    <h1>Only Connect </h1>
+    <div id="game-container">
+        <div id="game-header-row">
+            <div id="round-title">
+                Loading round
+            </div>
+            <div id="clock">
+                Time remaining: <span id="clock-counter">03:00</span>
+            </div>
+        </div>
+        <div id="game-instruction-row">
+                <button id="start-round-button" onclick=startRound() >Start round</button>
+                <span id="instructions-success" class="hidden">Congratulations, you completed the board and scored 4 points! Message me the connections for up to 4 more.</span>
+                <span id="instructions-timeout" class="hidden">
+                    Time's up! You scored $POINTS point(s). Click "Solve" to see the solution, and message me the connections for up to 4 more points.
+                    <button id="solve-button" onclick="solveBoard()">Solve</button>
+                </span>
+                <span id="instructions-nomorelives" class="hidden">
+                    You ran out of lives! You scored $POINTS point(s). Click "Solve" to see the solution, and message me the connections for up to 4 more points.
+                    <button id="solve-button" onclick="solveBoard()">Solve</button>
+                </span>
+        </div>
+        <div id="lives-left" class="hidden">FOO</div>
+        <div id="board" class="no-interact">
+            <div class="cell" id="cell-1-1"></div>
+            <div class="cell" id="cell-1-2"></div>
+            <div class="cell" id="cell-1-3"></div>
+            <div class="cell" id="cell-1-4"></div>
+            <div class="cell" id="cell-2-1"></div>
+            <div class="cell" id="cell-2-2"></div>
+            <div class="cell" id="cell-2-3"></div>
+            <div class="cell" id="cell-2-4"></div>
+            <div class="cell" id="cell-3-1"></div>
+            <div class="cell" id="cell-3-2"></div>
+            <div class="cell" id="cell-3-3"></div>
+            <div class="cell" id="cell-3-4"></div>
+            <div class="cell" id="cell-4-1"></div>
+            <div class="cell" id="cell-4-2"></div>
+            <div class="cell" id="cell-4-3"></div>
+            <div class="cell" id="cell-4-4"></div>
+        </div>
+    </div>
+</body>
