@@ -125,8 +125,9 @@ function addCorrectRow(correctRow) {
     }
     else{
         // board is solved
-        // mark the 4th row as correct
+        // re-populate the 4th row and mark it as correct
         for (var i = 12; i < 16; i++){
+            allCells[i].innerHTML = remainingWords[i - 12];
             allCells[i].classList.add("correct-4")
             allCells[i].classList.add("correct")
         }
